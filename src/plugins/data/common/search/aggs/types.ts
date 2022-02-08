@@ -45,6 +45,7 @@ import {
   AggParamsGeoHash,
   AggParamsTerms,
   AggParamsAvg,
+  AggParamsWeightedAvg,
   AggParamsCardinality,
   AggParamsGeoBounds,
   AggParamsGeoCentroid,
@@ -147,6 +148,7 @@ export interface AggParamsMapping {
   [BUCKET_TYPES.DATE_HISTOGRAM]: AggParamsDateHistogram;
   [BUCKET_TYPES.TERMS]: AggParamsTerms;
   [METRIC_TYPES.AVG]: AggParamsAvg;
+  [METRIC_TYPES.WEIGHTED_AVG]: AggParamsWeightedAvg;
   [METRIC_TYPES.CARDINALITY]: AggParamsCardinality;
   [METRIC_TYPES.COUNT]: BaseAggParams;
   [METRIC_TYPES.GEO_BOUNDS]: AggParamsGeoBounds;

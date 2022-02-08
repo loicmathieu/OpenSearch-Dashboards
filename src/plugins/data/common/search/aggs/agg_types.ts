@@ -36,6 +36,7 @@ import { METRIC_TYPES } from './metrics';
 
 import { getCountMetricAgg } from './metrics/count';
 import { getAvgMetricAgg } from './metrics/avg';
+import { getWeightedAvgMetricAgg } from './metrics/weighted_avg';
 import { getSumMetricAgg } from './metrics/sum';
 import { getMedianMetricAgg } from './metrics/median';
 import { getMinMetricAgg } from './metrics/min';
@@ -80,6 +81,7 @@ export const getAggTypes = () => ({
   metrics: [
     { name: METRIC_TYPES.COUNT, fn: getCountMetricAgg },
     { name: METRIC_TYPES.AVG, fn: getAvgMetricAgg },
+    { name: METRIC_TYPES.WEIGHTED_AVG, fn: getWeightedAvgMetricAgg },
     { name: METRIC_TYPES.SUM, fn: getSumMetricAgg },
     { name: METRIC_TYPES.MEDIAN, fn: getMedianMetricAgg },
     { name: METRIC_TYPES.MIN, fn: getMinMetricAgg },
@@ -130,6 +132,7 @@ import { aggTerms } from './buckets/terms_fn';
 
 /** Metrics: **/
 import { aggAvg } from './metrics/avg_fn';
+import { aggWeightedAvg } from './metrics/weighted_avg_fn';
 import { aggBucketAvg } from './metrics/bucket_avg_fn';
 import { aggBucketMax } from './metrics/bucket_max_fn';
 import { aggBucketMin } from './metrics/bucket_min_fn';
@@ -153,6 +156,7 @@ import { aggTopHit } from './metrics/top_hit_fn';
 
 export const getAggTypesFunctions = () => [
   aggAvg,
+  aggWeightedAvg,
   aggBucketAvg,
   aggBucketMax,
   aggBucketMin,

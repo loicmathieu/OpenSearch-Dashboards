@@ -32,6 +32,7 @@
 
 export enum METRIC_TYPES {
   AVG = 'avg',
+  WEIGHTED_AVG = 'weighted_avg',
   CARDINALITY = 'cardinality',
   AVG_BUCKET = 'avg_bucket',
   MAX_BUCKET = 'max_bucket',

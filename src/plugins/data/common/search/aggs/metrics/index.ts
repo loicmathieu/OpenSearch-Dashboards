@@ -35,6 +35,7 @@ export * from './metric_agg_types';
 export * from './lib/parent_pipeline_agg_helper';
 export * from './lib/sibling_pipeline_agg_helper';
 export { AggParamsAvg } from './avg';
+export { AggParamsWeightedAvg } from './weighted_avg';
 export { AggParamsCardinality } from './cardinality';
 export { AggParamsGeoBounds } from './geo_bounds';
 export { AggParamsGeoCentroid } from './geo_centroid';
